@@ -120,13 +120,13 @@ footer{padding:40px 0;border-top:1px solid var(--line)}.footer-grid{display:grid
 @media(max-width:430px){.nav-links .nav-code{display:none}.hero-actions{gap:8px}.button{padding:10px 12px}.event-card{grid-template-columns:40% 60%}.event-card img{min-height:210px}.event-copy h4{font-size:23px}.event-copy{padding:15px}.event-copy span{font-size:12px}.citation-toolbar{align-items:flex-start;flex-direction:column}.copy-bibtex{width:100%}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 
-.authors{max-width:1080px;margin:25px 0 0;color:var(--muted);font-size:15px;line-height:1.95}.authors span{white-space:nowrap}
+.authors{max-width:1080px;margin:25px 0 0;color:var(--muted);font-size:15px;line-height:1.95}.authors span{white-space:nowrap}.authors .author-row{display:block}
 .result-figure,.analysis-block figure,.additional-results figure{margin:0 0 30px}.analysis-block{margin-top:60px}.analysis-block>div:first-child{max-width:850px}.analysis-block:last-child{margin-bottom:0}
 figcaption{color:var(--muted);font-size:14px;line-height:1.7;margin:12px 2px 0}figcaption strong{color:var(--fg)}
 .table-wrap{overflow-x:auto;margin:24px 0 30px;padding:4px 20px 16px;border:1px solid var(--line);border-radius:8px;background:var(--bg)}
 .result-table{width:100%;border-collapse:collapse;font-size:15px;line-height:1.5;font-variant-numeric:tabular-nums}.result-table caption{text-align:left;font-weight:600;color:var(--fg);padding:16px 0 12px}.result-table th,.result-table td{padding:13px 12px;text-align:center;border-bottom:1px solid var(--line);vertical-align:middle}.result-table th:first-child,.result-table td:first-child{text-align:left;padding-left:0}.result-table th{font-weight:600}.result-table thead{border-bottom:2px solid var(--line-strong)}.result-table tbody tr:last-child>*{border-bottom:0}.result-table td strong{font-weight:700}.result-table td em{display:block;font-size:12px;white-space:nowrap;color:var(--muted);margin-top:4px}.table-note,.analysis-block .table-note{margin:8px 0 0;font-size:13px;line-height:1.65;color:var(--muted)}
 .additional-results{margin-top:64px;padding-top:32px;border-top:1px solid var(--line)}.additional-results>h3{font-size:30px;font-weight:500;line-height:1.25}.additional-results>p{color:var(--muted);font-size:16px}.additional-results details{border:1px solid var(--line);border-radius:7px;margin-top:14px;background:var(--bg)}.additional-results summary{cursor:pointer;padding:18px 22px;font-weight:600;font-size:16px;line-height:1.6}.additional-results summary:hover{color:var(--accent)}.additional-results summary:focus-visible{outline:3px solid var(--accent);outline-offset:2px}.additional-results details[open] summary{border-bottom:1px solid var(--line);color:var(--accent)}.detail-content{padding:24px}.detail-content>p{color:var(--muted);font-size:16px}.detail-content figure:last-child{margin-bottom:0}
-@media(max-width:720px){.authors{font-size:14px;line-height:1.9;margin-top:23px}.analysis-block{margin-top:44px}.table-wrap{padding:2px 12px 12px}.result-table{font-size:13px}.result-table th,.result-table td{padding:11px 9px}.result-table td em{font-size:11px}.detail-content{padding:14px}.additional-results summary{padding:16px;font-size:15px}.additional-results{margin-top:46px}figcaption{font-size:13px}}
+@media(max-width:720px){.authors{font-size:14px;line-height:1.9;margin-top:23px}.authors .author-row{white-space:normal}.analysis-block{margin-top:44px}.table-wrap{padding:2px 12px 12px}.result-table{font-size:13px}.result-table th,.result-table td{padding:11px 9px}.result-table td em{font-size:11px}.detail-content{padding:14px}.additional-results summary{padding:16px;font-size:15px}.additional-results{margin-top:46px}figcaption{font-size:13px}}
   </style>
   <script>
     try {
@@ -152,7 +152,11 @@ figcaption{color:var(--muted);font-size:14px;line-height:1.7;margin:12px 2px 0}f
     <section class="hero hero-showcase shell" id="top">
       <p class="eyebrow">LIBERO-MAX · DYNAMIC ROBUSTNESS</p>
       <h1>Do robot policies adapt<br>when the <em>world changes?</em></h1>
-      <p class="authors" aria-label="Authors"><span>Yunbei Zhang</span>, <span>Zijian Jin</span>, <span>Yuanzhe Liu</span>, <span>Janet Wang</span>, <span>Xilun Zhang</span>, <span>Yuyou Zhang</span>, <span>Zhenyu Zhang</span>, <span>Daoan Zhang</span>, <span>Shuaicheng Niu</span>, <span>Gen Li</span>, <span>Jianfei Yang</span>, <span>Jihun Hamm</span>, <span>Ismini Lourentzou</span>, <span>Weirui Ye</span>, <span>Bo Liu</span>, <span>Peter Stone</span>, <span>Marco Pavone</span></p>
+      <p class="authors" aria-label="Authors">
+        <span class="author-row"><span>Yunbei Zhang</span>, <span>Zijian Jin</span>, <span>Yuanzhe Liu</span>, <span>Janet Wang</span>, <span>Xilun Zhang</span>, <span>Yuyou Zhang</span></span>
+        <span class="author-row"><span>Zhenyu Zhang</span>, <span>Daoan Zhang</span>, <span>Shuaicheng Niu</span>, <span>Gen Li</span>, <span>Jianfei Yang</span>, <span>Jihun Hamm</span></span>
+        <span class="author-row"><span>Ismini Lourentzou</span>, <span>Weirui Ye</span>, <span>Bo Liu</span>, <span>Peter Stone</span>, <span>Marco Pavone</span></span>
+      </p>
       <div class="hero-support">
         <div class="hero-copy">
           <p class="hero-summary"><strong>LIBERO-MAX</strong> changes the environment after a robot has already begun acting. Every Dynamic rollout is matched to a Base control with the same task, reset, policy seed, and executed prefix. Base continues without an added event; Dynamic receives one change that persists for the rest of the rollout.</p>
