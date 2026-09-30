@@ -13,6 +13,8 @@
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://liberomax.github.io/">
+  <link rel="alternate" type="application/x-bibtex" href="CITATION.bib" title="LIBERO-MAX BibTeX citation">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
@@ -163,7 +165,7 @@ figcaption{color:var(--muted);font-size:14px;line-height:1.7;margin:12px 2px 0}f
           <div class="hero-actions" aria-label="Project links">
             <a class="button button-primary" href="https://github.com/liberomax/LIBERO-MAX" target="_blank" rel="noreferrer">View code ↗</a>
             <a class="button" href="https://github.com/liberomax/LIBERO-MAX/tree/main/benchmark/max8000" target="_blank" rel="noreferrer">Get dataset ↗</a>
-            <span class="button button-muted" aria-disabled="true">Paper coming soon</span>
+            <a class="button" href="https://arxiv.org/abs/2609.36518" target="_blank" rel="noreferrer">Read paper ↗</a>
           </div>
         </div>
         <aside class="hero-metrics" aria-label="Benchmark scale">
@@ -285,12 +287,13 @@ figcaption{color:var(--muted);font-size:14px;line-height:1.7;margin:12px 2px 0}f
       <div class="section-head citation-head">
         <span class="section-index">05</span>
         <div><p class="section-kicker">citation</p><h2>Cite LIBERO-MAX.</h2></div>
-        <p class="section-note">This temporary entry identifies the repository and dataset release. We will replace it with the verified paper BibTeX when the manuscript is public.</p>
+        <p class="section-note">If you use LIBERO-MAX, please cite our <a href="https://arxiv.org/abs/2609.36518" target="_blank" rel="noreferrer">arXiv paper</a>. <a href="CITATION.bib" download>Download BibTeX</a>.</p>
       </div>
       <div class="citation-card">
-        <div class="citation-toolbar"><span>BIBTEX · TEMPORARY</span><button class="copy-bibtex" type="button" data-copy-target="bibtex-entry">Copy BibTeX</button></div>
-        <pre id="bibtex-entry" aria-label="Temporary LIBERO-MAX BibTeX citation"><code>@misc{liberomax,
-  author       = {
+        <div class="citation-toolbar"><span>BIBTEX · arXiv:2609.36518</span><button class="copy-bibtex" type="button" data-copy-target="bibtex-entry">Copy BibTeX</button></div>
+        <pre id="bibtex-entry" aria-label="LIBERO-MAX paper BibTeX citation"><code>@misc{zhang2026liberomaxrobotpoliciesadapt,
+  title = {LIBERO-MAX: Do Robot Policies Adapt When the World Changes?},
+  author = {
     Yunbei Zhang and
     Zijian Jin and
     Yuanzhe Liu and
@@ -309,15 +312,17 @@ figcaption{color:var(--muted);font-size:14px;line-height:1.7;margin:12px 2px 0}f
     Peter Stone and
     Marco Pavone
   },
-  title        = {LIBERO-MAX: Do Robot Policies Adapt When the World Changes?},
-  howpublished = {\url{https://github.com/liberomax/LIBERO-MAX}},
-  note         = {Dataset. Paper forthcoming.}
+  year = {2026},
+  eprint = {2609.36518},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.RO},
+  url = {https://arxiv.org/abs/2609.36518}
 }</code></pre>
       </div>
     </section>
   </main>
 
-  <footer><div class="shell footer-grid"><div><a class="footer-wordmark" href="#top" aria-label="LIBERO-MAX home"><img src="assets/brand/liberomax_wordmark.svg?v=20260924" width="180" height="24" alt="LIBERO-MAX"></a><p>Dynamic robustness for robot policies.</p></div><div class="footer-links"><a href="#citation">BibTeX</a><a href="https://github.com/liberomax/LIBERO-MAX" target="_blank" rel="noreferrer">GitHub ↗</a><a href="#top">Back to top ↑</a></div><p class="footer-note">Dataset · Paper coming soon</p></div></footer>
+  <footer><div class="shell footer-grid"><div><a class="footer-wordmark" href="#top" aria-label="LIBERO-MAX home"><img src="assets/brand/liberomax_wordmark.svg?v=20260924" width="180" height="24" alt="LIBERO-MAX"></a><p>Dynamic robustness for robot policies.</p></div><div class="footer-links"><a href="https://arxiv.org/abs/2609.36518" target="_blank" rel="noreferrer">Paper ↗</a><a href="#citation">BibTeX</a><a href="https://github.com/liberomax/LIBERO-MAX" target="_blank" rel="noreferrer">GitHub ↗</a><a href="#top">Back to top ↑</a></div><p class="footer-note">arXiv:2609.36518 · 2026</p></div></footer>
   <script>
 (() => {
   const root = document.documentElement;
