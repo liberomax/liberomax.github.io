@@ -65,6 +65,14 @@ button{font:inherit}a,button{-webkit-tap-highlight-color:transparent}
 .nav-links .nav-code{color:#fff;background:#a7444e;margin-left:5px}.nav-links .nav-code:hover{color:#fff;background:#88343d}
 .theme-toggle{width:44px;height:44px;padding:0;color:var(--fg);background:transparent;border:1px solid transparent;border-radius:4px;cursor:pointer}.theme-toggle:hover{background:var(--soft);border-color:var(--line)}.theme-glyph{font-size:24px}
 .hero-showcase{padding:72px 0 80px}
+.hero-heading{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:32px;align-items:center}
+.institution-badges{padding:20px 12px;background:#fff;border-radius:6px}
+.institution-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px 16px;list-style:none;margin:0;padding:0}
+.institution-grid li{display:flex;flex-direction:column;align-items:center;gap:12px;min-width:0;text-align:center}
+.institution-grid img{width:100%;max-width:76px;height:68px;object-fit:contain}
+.institution-grid .institution-logo-wide{max-width:92px}
+.institution-grid span{color:#62676e;font-size:12px;line-height:1.4;white-space:nowrap}
+.authors sup{position:relative;top:-.1em;margin-left:1px;font-size:.75em;line-height:0;vertical-align:super}
 .eyebrow,.section-kicker{font-size:14px;font-weight:600;letter-spacing:.08em;line-height:1.5;text-transform:uppercase;color:var(--muted)}
 .hero-showcase .eyebrow{color:var(--accent);margin-bottom:22px}
 h1{max-width:1040px;font-size:clamp(40px,5.5vw,76px);font-weight:500;line-height:1.1;letter-spacing:-.045em;margin-bottom:0}
@@ -107,6 +115,7 @@ pre{overflow-x:auto;margin:0;padding:26px;color:#ededeb;background:#17191d;borde
 .citation-section{border-top:0}.citation-head{margin-bottom:30px}.citation-card{border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--soft)}.citation-toolbar{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:64px;padding:10px 20px;border-bottom:1px solid var(--line);font-size:13px;font-weight:600;letter-spacing:.04em}.copy-bibtex{min-height:40px;padding:8px 14px;color:var(--accent);background:var(--bg);border:1px solid var(--line-strong);border-radius:4px;font-size:14px;cursor:pointer}.copy-bibtex:hover{background:var(--accent-soft);border-color:var(--accent)}.citation-card pre{color:var(--fg);background:var(--bg);border:0;border-radius:0;font-size:14px;line-height:1.8}
 footer{padding:40px 0;border-top:1px solid var(--line)}.footer-grid{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:start}.footer-grid p{margin:9px 0 0;color:var(--muted);font-size:15px}.footer-links{display:flex;flex-wrap:wrap;gap:20px;font-size:14px}.footer-links a:hover{color:var(--accent)}.footer-note{grid-column:1/-1;font-size:13px!important}
 @media(max-width:980px){
+  .hero-heading{grid-template-columns:1fr;gap:28px}.institution-badges{width:min(100%,360px);padding:16px 12px}.institution-grid{gap:20px 16px}
   .nav-links a:not(.nav-code){display:none}.hero-support{grid-template-columns:1fr;gap:28px}.hero-metrics{grid-template-columns:repeat(4,1fr)}
   .section-head{grid-template-columns:44px minmax(0,1fr)}.section-note{grid-column:2}.comparison{grid-template-columns:1fr}.comparison-arrow{min-height:44px;transform:rotate(90deg)}
   .construction-summary,.reproduce-grid{grid-template-columns:1fr}.reproduce-grid{gap:32px}.event-copy{padding:17px}
@@ -152,13 +161,27 @@ figcaption{color:var(--muted);font-size:14px;line-height:1.7;margin:12px 2px 0}f
 
   <main id="main">
     <section class="hero hero-showcase shell" id="top">
-      <p class="eyebrow">LIBERO-MAX · DYNAMIC ROBUSTNESS</p>
-      <h1>Do robot policies adapt<br>when the <em>world changes?</em></h1>
-      <p class="authors" aria-label="Authors">
-        <span class="author-row"><span>Yunbei Zhang</span>, <span>Zijian Jin</span>, <span>Yuanzhe Liu</span>, <span>Janet Wang</span>, <span>Xilun Zhang</span>, <span>Yuyou Zhang</span></span>
-        <span class="author-row"><span>Zhenyu Zhang</span>, <span>Daoan Zhang</span>, <span>Shuaicheng Niu</span>, <span>Gen Li</span>, <span>Jianfei Yang</span>, <span>Jihun Hamm</span></span>
-        <span class="author-row"><span>Ismini Lourentzou</span>, <span>Weirui Ye</span>, <span>Bo Liu</span>, <span>Peter Stone</span>, <span>Marco Pavone</span></span>
-      </p>
+      <div class="hero-heading">
+        <div class="hero-intro">
+          <p class="eyebrow">LIBERO-MAX · DYNAMIC ROBUSTNESS</p>
+          <h1>Do robot policies adapt<br>when the <em>world changes?</em></h1>
+          <p class="authors" aria-label="Authors">
+            <span class="author-row"><span>Yunbei Zhang<sup>*</sup></span>, <span>Zijian Jin<sup>*</sup></span>, <span>Yuanzhe Liu</span>, <span>Janet Wang</span>, <span>Xilun Zhang</span>, <span>Yuyou Zhang</span></span>
+            <span class="author-row"><span>Zhenyu Zhang</span>, <span>Daoan Zhang</span>, <span>Shuaicheng Niu</span>, <span>Gen Li</span>, <span>Jianfei Yang</span>, <span>Jihun Hamm</span></span>
+            <span class="author-row"><span>Ismini Lourentzou</span>, <span>Weirui Ye</span>, <span>Bo Liu</span>, <span>Peter Stone</span>, <span>Marco Pavone</span></span>
+          </p>
+        </div>
+        <aside class="institution-badges" aria-label="Selected author affiliations">
+          <ul class="institution-grid">
+            <li><img src="assets/institutions/stanford.png" width="76" height="68" alt="Stanford University"><span>Stanford</span></li>
+            <li><img src="assets/institutions/cmu.svg" width="76" height="68" alt="Carnegie Mellon University"><span>CMU</span></li>
+            <li><img class="institution-logo-wide" src="assets/institutions/mit.svg" width="92" height="68" alt="Massachusetts Institute of Technology"><span>MIT</span></li>
+            <li><img class="institution-logo-wide" src="assets/institutions/ut-austin.svg" width="92" height="68" alt="The University of Texas at Austin"><span>UT Austin</span></li>
+            <li><img src="assets/institutions/uiuc.svg" width="76" height="68" alt="University of Illinois Urbana-Champaign"><span>UIUC</span></li>
+            <li><img src="assets/institutions/tulane.svg" width="76" height="68" alt="Tulane University"><span>Tulane</span></li>
+          </ul>
+        </aside>
+      </div>
       <div class="hero-support">
         <div class="hero-copy">
           <p class="hero-summary"><strong>LIBERO-MAX</strong> changes the environment after a robot has already begun acting. Every Dynamic rollout is matched to a Base control with the same task, reset, policy seed, and executed prefix. Base continues without an added event; Dynamic receives one change that persists for the rest of the rollout.</p>
