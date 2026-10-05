@@ -74,6 +74,9 @@ button{font:inherit}a,button{-webkit-tap-highlight-color:transparent}
 .institution-grid .institution-logo-wide{max-width:96px}
 .institution-grid .institution-logo-seal{height:88px}
 .institution-grid .institution-logo-tulane{height:96px}
+.institution-symbol{display:block;width:100%;max-width:72px;aspect-ratio:1;overflow:hidden}
+.institution-symbol img{display:block;width:100%;height:100%;max-width:none;object-fit:cover;object-position:left center}
+.institution-symbol-ntu{aspect-ratio:839/1079}
 .authors sup{position:relative;top:-.1em;margin-left:1px;font-size:.75em;line-height:0;vertical-align:super}
 .eyebrow,.section-kicker{font-size:14px;font-weight:600;letter-spacing:.08em;line-height:1.5;text-transform:uppercase;color:var(--muted)}
 .hero-showcase .eyebrow{color:var(--accent);margin-bottom:22px}
@@ -181,8 +184,8 @@ figcaption{color:var(--muted);font-size:14px;line-height:1.7;margin:12px 2px 0}f
             <li><img class="institution-logo-wide" src="assets/institutions/mit.svg" width="96" height="80" alt="Massachusetts Institute of Technology"></li>
             <li><img src="assets/institutions/uiuc.svg" width="88" height="80" alt="University of Illinois Urbana-Champaign"></li>
             <li><img class="institution-logo-seal" src="assets/institutions/ut-austin.png" width="88" height="88" alt="The University of Texas at Austin"></li>
-            <li><img class="institution-logo-wide" src="assets/institutions/ntu.png" width="96" height="80" alt="Nanyang Technological University, Singapore"></li>
-            <li><img class="institution-logo-wide" src="assets/institutions/nyu.svg" width="96" height="80" alt="New York University"></li>
+            <li><span class="institution-symbol institution-symbol-ntu"><img src="assets/institutions/ntu.png" width="3006" height="1079" alt="Nanyang Technological University, Singapore"></span></li>
+            <li><span class="institution-symbol"><img src="assets/institutions/nyu.svg" width="106" height="36" alt="New York University"></span></li>
             <li><img class="institution-logo-tulane" src="assets/institutions/tulane.png" width="88" height="96" alt="Tulane University"></li>
           </ul>
         </aside>
