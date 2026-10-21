@@ -104,6 +104,9 @@ h1 em{color:var(--accent);font-weight:inherit}
 .comparison-panel h3{margin-bottom:24px;font-size:29px;font-weight:500;line-height:1.2}.comparison-panel>p:last-child{margin:22px 0 0;font-size:16px;line-height:1.7}
 .comparison-arrow{display:grid;place-items:center;color:var(--muted);font-size:30px}
 .timeline{display:flex;flex-wrap:wrap;align-items:center;gap:8px}.timeline-step{padding:6px 8px;border:1px solid var(--line-strong);border-radius:3px;font-size:12px;font-weight:600;text-transform:uppercase}.timeline-arrow{color:var(--muted)}.event-arrow,.active-red{color:var(--accent)}.active-red{border-color:var(--accent);background:var(--bg)}
+.paired-demo{margin:0 0 64px;overflow:hidden;border:1px solid var(--line);border-radius:8px;background:#fff}
+.paired-demo video{display:block;width:100%;height:auto;aspect-ratio:16/9}
+@media(max-width:720px){.paired-demo{margin-bottom:48px;border-radius:6px}}
 .event-heading{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:26px}.event-heading h3{font-size:34px;font-weight:500;line-height:1.2;letter-spacing:-.025em;margin-bottom:0}.event-heading>p{color:var(--muted);font-size:14px;margin:0}
 .event-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
 .event-card{display:grid;grid-template-columns:42% 58%;overflow:hidden;border:1px solid var(--line);border-radius:8px;background:var(--bg)}.event-card img{width:100%;height:100%;min-height:190px;object-fit:cover}
@@ -233,6 +236,11 @@ figcaption{color:var(--muted);font-size:14px;line-height:1.7;margin:12px 2px 0}f
           <p>LIBERO-MAX measures whether task success is preserved after the event. It does not infer internal detection or deliberate replanning.</p>
         </article>
       </div>
+      <figure class="paired-demo" id="paired-examples" aria-label="Sixteen paired examples across eight mid-task event types">
+        <video autoplay loop muted playsinline preload="auto" width="1600" height="900" poster="assets/media/paired-examples-poster.png" aria-label="Two synchronized Base and Dynamic examples per event type, showing the change and complete recorded outcomes">
+          <source src="assets/media/paired-examples.mp4" type="video/mp4">
+        </video>
+      </figure>
       <div class="event-heading"><div><p class="section-kicker">the frozen main track</p><h3>Eight ways the world can change</h3></div><p>1,000 matched cases per event type</p></div>
       <div class="event-grid">
         <article class="event-card family-geometry"><img width="320" height="378" src="assets/media/target-relocation.gif" alt="Target relocation animation" loading="lazy"><div class="event-copy"><span>GEOMETRY · 01</span><h4>Target relocation</h4><p>The manipulated object moves after approach.</p></div></article>
